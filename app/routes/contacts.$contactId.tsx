@@ -1,4 +1,4 @@
-import { Form, json, useLoaderData } from "@remix-run/react";
+import { Form, json, Outlet, useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";
 
 import { getContact, type ContactRecord } from "../data";
@@ -73,6 +73,8 @@ export default function Contact() {
           </Form>
         </div>
       </div>
+
+      <Outlet />
     </div>
   );
 }
